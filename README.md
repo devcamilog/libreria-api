@@ -63,11 +63,13 @@ Esta es una API básica desarrollada con FastAPI simulando una librería . Permi
 ## Ejemplo de JSON para agregar un libro:
 
 {
+
     "id": "id,
     "titulo": "Título del libro",
     "autor": "Nombre del autor",
     "year": 2000,
     "genero": "Género del libro"
+    
 }
 
 ## Pruebas automatizadas:
