@@ -1,27 +1,15 @@
 # LIBRERIA FASTAPI 
 
-library(knitr)
-library(kableExtra)
-
-kable(
-  matrix(
-    c("Python 3.7+", "FastAPI 0.68.1"),
-    ncol = 2,
-    dimnames = list(NULL, c("Requisitos", "Versiones"))
-  ),
-  caption = "Versiones y Requisitos",
-  col.names = c("Requisitos", "Versiones"),
-  row.names = FALSE,
-  align = "c",
-  booktabs = TRUE
-) %>%
-  kable_styling(bootstrap_options = "striped", position = "center")
-
-library(rmarkdown)
-rmarkdown::render('README.Rmd', output_format = 'html_document')
-
-
 Esta es una API básica desarrollada con FastAPI simulando una librería . Permite realizar operaciones CRUD  para los endpoints(Crear, Leer, Actualizar y Eliminar) sobre una lista de libros. La API permite agregar, obtener, editar y eliminar libros, así como filtrar libros por género o buscar libros por su ID.
+
+
+## Requisitos:
+
+- python 3.7 o versiones mas actuales.
+
+- uvicorn: Para ejecutar la aplicación, asegúrate de tener instalado el paquete "uvicorn", que es un servidor ASGI de alto rendimiento utilizado para ejecutar aplicaciones FastAPI.
+
+- pytest y requests: Estos paquetes son necesarios para ejecutar las pruebas automatizadas (unit tests) que acompañan a la aplicación. "pytest" es un marco de pruebas que se utiliza para escribir y ejecutar pruebas, mientras que "requests" es una biblioteca utilizada para realizar solicitudes HTTP en las pruebas.
 
 
 ## Instalación
