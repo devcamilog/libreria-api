@@ -51,24 +51,12 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 def inicio():
     return "index.html"
 
-@app.get("/items/",  tags=['Instalacion'])
-def instalacion():
-    """
-Holaaaaaaaaaaaaaa
-    """
-    return 
+
 
 @app.get('/libros', tags=[' obtener libros'], response_model=List[Libro], status_code=200)
 def obtener_libros() -> List[Libro] :
     return JSONResponse(status_code=200,content=libros)
 
-#parametros de ruta para filtrar por id
-# @app.get('/libros/{id}', tags=['libros por id'], response_model=Libro)
-# def obtener_libro_id(id: int = Path(ge=1, le=2000)) -> Libro:
-#     for item in libros:
-#         if item["id"] == id:
-#             return JSONResponse(content=item)        
-#     return JSONResponse(status_code=404,content=[])
 
 #parametros de ruta para filtrar por id
 @app.get('/libros/{id}', tags=['libros por id'], response_model=Libro)
