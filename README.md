@@ -78,7 +78,7 @@ Para ejecutar las pruebas automatizadas:
 
 1. Abre otra terminal.
 
-2. Asegúrate de que la API esté en ejecución (por ejemplo, utilizando uvicorn) y luego ejecuta el siguiente comando:
+2. Asegúrate de que la API esté en ejecución (utilizando uvicorn) y luego ejecuta el siguiente comando:
     - pytest test_main.py -v.
 
 O tambien puedes hacerlo sin ejecutar uvicorn y puedes usar este comando:
