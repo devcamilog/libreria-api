@@ -75,6 +75,6 @@ li {
 .FormDelete {
     display: flex;
     justify-content: center;
-    top: -197px;
+    /* top: -197px; */
     position: relative;
 }
