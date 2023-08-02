@@ -53,3 +53,19 @@ def test_eliminar_libro():
     response = requests.delete(f"{ENDPOINT}/libros/2")
     assert response.status_code == 200
     assert response.json() == {"message": "Se ha eliminado un libro"}
+
+def test_agregar_libros_campos_requeridos_faltantes():
+    libro_data = {
+        # Faltan campos requeridos: "autor", "year", "genero"
+    }
+    response = requests.post(ENDPOINT + "/libros", json=libro_data)
+    assert response.status_code == 422
+    assert "detail" in response.json()
+
+def test_editar_libro_campos_requeridos_faltantes():
+    libro_editado = {
+        # Faltan campos requeridos: "autor", "year", "genero"
+    }
+    response = requests.put(f"{ENDPOINT}/libros/1", json=libro_editado)
+    assert response.status_code == 422
+    assert "detail" in response.json()
